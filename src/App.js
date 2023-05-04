@@ -8,9 +8,13 @@ function App(props) {
 const [tasks, setTasks] = useState(props.tasks);
 
 const taskList = tasks.map((task) => (
-    <h2>
-      {task.name}
-    </h2>
+  <ItemList
+  id={task.id}
+  name={task.name}
+  key={task.id}
+  deleteTask={deleteTask}
+  
+/>
   ));
 
   const tasksNoun = taskList.length !== 1 ? "Tareas Ingresadas" : "Tarea Ingresada";
@@ -33,13 +37,21 @@ const taskList = tasks.map((task) => (
     }
   }, [tasks.length, prevTaskLength]);
 
+  function deleteTask(id) {
+    const remainingTasks = tasks.filter((task) => id !== task.id);
+    setTasks(remainingTasks);
+  }
 
+  function addTask(name) {
+    const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
+    setTasks([...tasks, newTask]);
+  }
   return (
     <html>
       <body  >
         <div className = "main">
           <div className="container">
-            <Form />
+            <Form addTask={addTask}/>
             <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
               {headingText}
             </h2>
