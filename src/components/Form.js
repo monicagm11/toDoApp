@@ -25,7 +25,7 @@ function Form(props) {
         placeholder = "Ingresa la tarea"
       />
     <button type="submit" className="buttonAdd">
-        Añadir
+     Añadir <i class='far fa-calendar-alt'></i>
       </button>
     </form>
   );

@@ -33,7 +33,7 @@ export default function ItemList(props) {
             type="button"
             className="btn btn__danger"
             onClick={() => props.deleteTask(props.id)}
-          >
+          >Eliminar <i class='fas fa-trash-alt'></i>
           </button>
         </div>
     </div>
