@@ -51,10 +51,11 @@ const taskList = tasks.map((task) => (
       <body  >
         <div className = "main">
           <div className="container">
+          <h1>Actividad modulo 2, task list(Equipo 3):</h1>
             <Form addTask={addTask}/>
-            <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
+            <h3 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
               {headingText}
-            </h2>
+            </h3>
             <ul
               className="todo-list stack-large stack-exception"
               aria-labelledby="list-heading">

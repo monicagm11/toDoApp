@@ -20,14 +20,14 @@ body{
   margin-right: auto;
   width: 60%;
   background-color: aliceblue;
-  padding: 2%;
+  padding: 3%;
   border-radius: 15px;
 }
 
 input[type="text"] {
   border-radius: 0;
   text-transform: capitalize;
-  width: 90%;
+  width: 40%;
   height: 30px;
 }
 
